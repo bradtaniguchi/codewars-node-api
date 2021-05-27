@@ -4,6 +4,7 @@ import {
   CompletedChallengeResponse,
   User
 } from '..';
+import { CodeChallenge } from '../types/code-challenge';
 
 /**
  * Class to interfacace with the codewars v1 public api.
@@ -64,6 +65,16 @@ export class CodewarsV1Api {
     user: string
   ): Promise<AuthoredChallengeResponse> {
     const url = `${CodewarsV1Api.BASE_URL}/users/${user}/code-challenges/authored`;
+    return this._request(url);
+  }
+
+  /**
+   * Returns the code challenge.
+   * @param challenge the challengeId or the challenge slug
+   * @returns code challenge
+   */
+  public getCodeChallenge(challenge: string): Promise<CodeChallenge> {
+    const url = `${CodewarsV1Api.BASE_URL}/code-challenges/${challenge}`;
     return this._request(url);
   }
 }

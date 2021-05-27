@@ -28,3 +28,9 @@ npm run get:completed-challenges <username | userId> [page = 0]
 ```bash
 npm run get:authored-challenges <username | userId>
 ```
+
+### get-code-challenges
+
+```bash
+npm run get:code-challenges <challengeId | challenge-slug>
+```
