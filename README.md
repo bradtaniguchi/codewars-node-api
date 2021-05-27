@@ -16,3 +16,9 @@ just getting raw data directly outputted directly into stdout.
 ```bash
 npm run get:user <username | userId>
 ```
+
+### get-completed-challenges
+
+```bash
+npm run get:completed-challenges <username | userId> [page = 0]
+```

@@ -1,5 +1,5 @@
 import * as https from 'https';
-import { User } from '../types/user';
+import { CompletedChallengeResponse, User } from '..';
 
 /**
  * Class to interfacace with the codewars v1 public api.
@@ -13,6 +13,7 @@ export class CodewarsV1Api {
 
   /**
    * Internal method to make https get requests.
+   * TODO: throw error if bad headers
    */
   private async _request<T>(url: string): Promise<T> {
     return new Promise((resolve, reject) =>
@@ -29,9 +30,24 @@ export class CodewarsV1Api {
   /**
    * Return the user for the given username or userId
    * @param user the username or userId
+   * @returns the user
    */
   public getUser(user: string): Promise<User> {
     const url = `${CodewarsV1Api.BASE_URL}/users/${user}`;
+    return this._request(url);
+  }
+
+  /**
+   * Returns the list of completed challenges for the given user.
+   * @param user the username or userId
+   * @param page the page offset,
+   * @returns response object with number of pages, items and data.
+   */
+  public getCompletedChallenges(
+    user: string,
+    page = 0
+  ): Promise<CompletedChallengeResponse> {
+    const url = `${CodewarsV1Api.BASE_URL}/users/${user}/code-challenges/completed?page=${page}`;
     return this._request(url);
   }
 }

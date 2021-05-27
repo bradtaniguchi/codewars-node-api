@@ -6,7 +6,8 @@
     "build": "tsc",
     "lint": "eslint",
     "clean": "rimraf lib",
-    "get:user": "npx ts-node --project=tools/tsconfig.tools.json tools/get-user.ts"
+    "get:user": "npx ts-node --project=tools/tsconfig.tools.json tools/get-user.ts",
+    "get:completed-challenges": "npx ts-node --project=tools/tsconfig.tools.json tools/get-completed-challenges.ts"
   },
   "keywords": [
     "codewars",

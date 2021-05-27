@@ -3,6 +3,7 @@ export * from './types/authored-challenge';
 export * from './types/code-challenge';
 export * from './types/code-challenge-rank';
 export * from './types/completed-challenge';
+export * from './types/completed-challenge-response';
 export * from './types/user';
 export * from './types/user-code-challenges';
 export * from './types/user-rank';
