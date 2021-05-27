@@ -1,5 +1,6 @@
 export * from './types/author';
 export * from './types/authored-challenge';
+export * from './types/authored-challenge-response';
 export * from './types/code-challenge';
 export * from './types/code-challenge-rank';
 export * from './types/completed-challenge';

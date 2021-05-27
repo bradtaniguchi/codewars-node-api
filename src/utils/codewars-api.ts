@@ -1,5 +1,9 @@
 import * as https from 'https';
-import { CompletedChallengeResponse, User } from '..';
+import {
+  AuthoredChallengeResponse,
+  CompletedChallengeResponse,
+  User
+} from '..';
 
 /**
  * Class to interfacace with the codewars v1 public api.
@@ -48,6 +52,18 @@ export class CodewarsV1Api {
     page = 0
   ): Promise<CompletedChallengeResponse> {
     const url = `${CodewarsV1Api.BASE_URL}/users/${user}/code-challenges/completed?page=${page}`;
+    return this._request(url);
+  }
+
+  /**
+   * Returns the list of challenges authored by the user.
+   * @param user the username or userId
+   * @returns response object with the data
+   */
+  public getAuthoredChallenges(
+    user: string
+  ): Promise<AuthoredChallengeResponse> {
+    const url = `${CodewarsV1Api.BASE_URL}/users/${user}/code-challenges/authored`;
     return this._request(url);
   }
 }
