@@ -11,6 +11,16 @@
     "get:authored-challenges": "npx ts-node --project=tools/tsconfig.tools.json tools/get-authored-challenges.ts",
     "get:code-challenge": "npx ts-node --project=tools/tsconfig.tools.json tools/get-code-challenges.ts"
   },
+  "main": "lib/index.js",
+  "types": "lib/index.d.js",
+  "files": [
+    "lib/**/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bradtaniguchi/codewars-node-api.git"
+  },
+  "homepage": "https://github.com/bradtaniguchi/codewars-node-api/#readme",
   "keywords": [
     "codewars",
     "api",
