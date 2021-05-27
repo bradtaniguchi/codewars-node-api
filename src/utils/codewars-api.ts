@@ -27,7 +27,8 @@ export class CodewarsV1Api {
   }
 
   /**
-   *
+   * Return the user for the given username or userId
+   * @param user the username or userId
    */
   public getUser(user: string): Promise<User> {
     const url = `${CodewarsV1Api.BASE_URL}/users/${user}`;
