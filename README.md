@@ -1,8 +1,44 @@
 # codewars-node-api
 
-Utility to call the codewars public api.
+Utility to call the codewars' [public api](https://dev.codewars.com/#introduction).
 
 **Not affiliated with codewars**.
+
+## Usage
+
+**node.js**
+
+```js
+const { CodewarsV1Api } = require('codewars-node-api');
+
+const cwApi = new CodewarsV1Api();
+
+const userId = 'bradtaniguchi';
+cwApi.getUser(user).then((user) => {
+  console.log(user.name); // Brad
+});
+```
+
+**TypeScript**
+
+```js
+import { CodewarsV1Api } from 'codewars-node-api';
+
+const cwApi = new CodewarsV1Api();
+
+const userId = 'bradtaniguchi';
+cwApi.getUser(user).then((user) => {
+  console.log(user.name); // Brad
+});
+```
+
+## Methods
+
+TBD...
+
+## Contributing
+
+See [CONTRIBUTING](./CONTRIBUTING.md) and review the [CODE_OF_CONDUCT](./CODE_OF_CONDUCT).
 
 ## Tooling Scripts
 
