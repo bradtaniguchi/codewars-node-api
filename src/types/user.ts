@@ -1,26 +1,41 @@
-/*
-username	string	Username of the user.
-name	string	Name of the user.
-honor	number	Total honor points earned by the user.
-clan	string	Name of the clan.
-leaderboardPosition	number	The user's position on the overall leaderboard.
-skills	string[]	Array of skills entered by the user.
-ranks	object	Ranks object with overall and language ranks.
-codeChallenges	object	Object with fields totalAuthored and totalCompleted for the number of authored and completed kata respectively.
-*/
+/**
+ * User information
+ */
+
+import { UserCodeChallenges } from './user-code-challenges';
+import { UserRanks } from './user-ranks';
 
 export interface User {
+  /**
+   * Username of the user.
+   */
   username: string;
+  /**
+   * Name of the user.
+   */
   name: string;
+  /**
+   * Total honor points eared by the user.
+   */
   honor: number;
+  /**
+   * The name of the clan.
+   */
   clan: string;
+  /**
+   * The user's position on the overall leaderboard.
+   */
   leaderboardPosition: number;
+  /**
+   * Array of skills entered by the user.
+   */
   skills: string[];
-  // TODO: define sub-type
-  ranks: any;
-  // TODO: define sub-type
-  codeChallenges: {
-    totalAuthored: number;
-    totalCompleted: number;
-  };
+  /**
+   * Describes the user's rank overall, and per language basis.
+   */
+  ranks: UserRanks;
+  /**
+   * Object with fields relating to authoring, and completing katas.
+   */
+  codeChallenges: UserCodeChallenges;
 }

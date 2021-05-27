@@ -1,7 +1,9 @@
-import * from './types/authored-challenge';
-import * from './types/code-challenge';
-import * from './types/completed-challenge';
-import * from './types/errors';
-import * from './types/user';
-
-
+export * from './types/author';
+export * from './types/authored-challenge';
+export * from './types/code-challenge-rank';
+export * from './types/code-challenge';
+export * from './types/completed-challenge';
+export * from './types/user-code-challenges';
+export * from './types/user-rank';
+export * from './types/user-ranks';
+export * from './types/user';

@@ -14,7 +14,6 @@ export interface AuthoredChallenge {
    * Description of the kata in Markdown.
    */
   description: string;
-
   /**
    * Rank of the kata if approved.
    */
