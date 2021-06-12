@@ -5,10 +5,7 @@ Utility to call the codewars' [public api](https://dev.codewars.com/#introductio
 
 **Not affiliated with codewars**.
 
-https://img.shields.io/npm/v/codewars-node-api?style=flat-square
-https://img.shields.io/github/license/bradtaniguchi/codewars-node-api?style=flat-square
-https://img.shields.io/github/workflow/status/bradtaniguchi/codewars-node-api/on-push-workflow?style=flat-square
-https://img.shields.io/github/issues/bradtaniguchi/codewars-node-api?style=flat-square
+<img alt="npm" src="https://img.shields.io/npm/v/codewars-node-api?style=flat-square"> <img alt="license" src="https://img.shields.io/github/license/bradtaniguchi/codewars-node-api?style=flat-square"> <img alt="github workflow" src="https://img.shields.io/github/workflow/status/bradtaniguchi/codewars-node-api/on-push-workflow?style=flat-square"> <img alt="github issues" src="https://img.shields.io/github/issues/bradtaniguchi/codewars-node-api?style=flat-square">
 
 
 ## Usage
