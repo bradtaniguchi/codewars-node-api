@@ -1,8 +1,15 @@
+
 # codewars-node-api
 
 Utility to call the codewars' [public api](https://dev.codewars.com/#introduction).
 
 **Not affiliated with codewars**.
+
+https://img.shields.io/npm/v/codewars-node-api?style=flat-square
+https://img.shields.io/github/license/bradtaniguchi/codewars-node-api?style=flat-square
+https://img.shields.io/github/workflow/status/bradtaniguchi/codewars-node-api/on-push-workflow?style=flat-square
+https://img.shields.io/github/issues/bradtaniguchi/codewars-node-api?style=flat-square
+
 
 ## Usage
 
