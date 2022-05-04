@@ -1,13 +1,11 @@
 import * as https from 'https';
-import {
-  AuthoredChallengeResponse,
-  CompletedChallengeResponse,
-  User
-} from '..';
+import { AuthoredChallengeResponse } from '../types/authored-challenge-response';
 import { CodeChallenge } from '../types/code-challenge';
+import { CompletedChallengeResponse } from '../types/completed-challenge-response';
+import { User } from '../types/user';
 
 /**
- * Class to interfacace with the codewars v1 public api.
+ * Class to interface with the codewars v1 public api.
  */
 export class CodewarsV1Api {
   /**
