@@ -1,4 +1,3 @@
-
 # codewars-node-api
 
 Utility to call the codewars' [public api](https://dev.codewars.com/#introduction).
@@ -7,6 +6,15 @@ Utility to call the codewars' [public api](https://dev.codewars.com/#introductio
 
 <img alt="npm" src="https://img.shields.io/npm/v/codewars-node-api?style=flat-square"> <img alt="license" src="https://img.shields.io/github/license/bradtaniguchi/codewars-node-api?style=flat-square"> <img alt="github workflow" src="https://img.shields.io/github/workflow/status/bradtaniguchi/codewars-node-api/on-push-workflow?style=flat-square"> <img alt="github issues" src="https://img.shields.io/github/issues/bradtaniguchi/codewars-node-api?style=flat-square">
 
+## Installation
+
+Using npm:
+
+```
+npm i codewars-node-api
+```
+
+Note: add `--save` if you are using npm < 5.0.0
 
 ## Usage
 
@@ -35,14 +43,6 @@ cwApi.getUser(userId).then((user) => {
   console.log(user.name); // Brad
 });
 ```
-
-## Methods
-
-TBD...
-
-## Contributing
-
-See [CONTRIBUTING](./CONTRIBUTING.md) and review the [CODE_OF_CONDUCT](./CODE_OF_CONDUCT).
 
 ## Tooling Scripts
 
@@ -74,3 +74,11 @@ npm run get:authored-challenges <username | userId>
 ```bash
 npm run get:code-challenges <challengeId | challenge-slug>
 ```
+
+## Contributing
+
+See [CONTRIBUTING](./CONTRIBUTING.md) and review the [CODE_OF_CONDUCT](./CODE_OF_CONDUCT).
+
+## License
+
+See [LICENSE](./LICENSE)
