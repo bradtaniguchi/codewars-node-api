@@ -1,0 +1,17 @@
+{
+  "recommendations": [
+    "aaron-bond.better-comments",
+    "christian-kohler.path-intellisense",
+    "dbaeumer.vscode-eslint",
+    "eamodio.gitlens",
+    "EditorConfig.EditorConfig",
+    "eg2.vscode-npm-script",
+    "esbenp.prettier-vscode",
+    "GitHub.github-vscode-theme",
+    "GitHub.vscode-pull-request-github",
+    "PKief.material-icon-theme",
+    "redhat.vscode-yaml",
+    "streetsidesoftware.code-spell-checker",
+    "zhuangtongfa.material-theme"
+  ]
+}
