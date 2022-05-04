@@ -67,6 +67,8 @@ export interface CodeChallenge {
   voteScore: number;
   /**
    * Whether to allow contributions.
+   *
+   * **Note** This will become an optional param in a future version.
    */
   contributorsWanted: boolean;
   /**
