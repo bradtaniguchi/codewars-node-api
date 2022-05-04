@@ -11,7 +11,7 @@
     "get:user": "npx ts-node --project=tools/tsconfig.tools.json tools/get-user.ts",
     "get:completed-challenges": "npx ts-node --project=tools/tsconfig.tools.json tools/get-completed-challenges.ts",
     "get:authored-challenges": "npx ts-node --project=tools/tsconfig.tools.json tools/get-authored-challenges.ts",
-    "get:code-challenge": "npx ts-node --project=tools/tsconfig.tools.json tools/get-code-challenges.ts"
+    "get:code-challenge": "npx ts-node --project=tools/tsconfig.tools.json tools/get-code-challenge.ts"
   },
   "main": "lib/index.js",
   "types": "lib/index.d.js",
