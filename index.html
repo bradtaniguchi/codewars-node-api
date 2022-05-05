@@ -14,8 +14,8 @@
 </code></pre>
 <p>Note: add <code>--save</code> if you are using npm &lt; 5.0.0</p>
 
-<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
-  <h2>Usage</h2>
+<a href="#example-usage" id="example-usage" style="color: inherit; text-decoration: none;">
+  <h2>Example Usage</h2>
 </a>
 <p><strong>node.js</strong></p>
 <pre><code class="language-js"><span class="hl-2">const</span><span class="hl-1"> { </span><span class="hl-3">CodewarsV1Api</span><span class="hl-1"> } = </span><span class="hl-4">require</span><span class="hl-1">(</span><span class="hl-5">&#39;codewars-node-api&#39;</span><span class="hl-1">);</span><br/><br/><span class="hl-2">const</span><span class="hl-1"> </span><span class="hl-3">cwApi</span><span class="hl-1"> = </span><span class="hl-2">new</span><span class="hl-1"> </span><span class="hl-4">CodewarsV1Api</span><span class="hl-1">();</span><br/><br/><span class="hl-2">const</span><span class="hl-1"> </span><span class="hl-3">userId</span><span class="hl-1"> = </span><span class="hl-5">&#39;bradtaniguchi&#39;</span><span class="hl-1">;</span><br/><span class="hl-0">cwApi</span><span class="hl-1">.</span><span class="hl-4">getUser</span><span class="hl-1">(</span><span class="hl-0">userId</span><span class="hl-1">).</span><span class="hl-4">then</span><span class="hl-1">((</span><span class="hl-0">user</span><span class="hl-1">) </span><span class="hl-2">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-1">  </span><span class="hl-0">console</span><span class="hl-1">.</span><span class="hl-4">log</span><span class="hl-1">(</span><span class="hl-0">user</span><span class="hl-1">.</span><span class="hl-0">name</span><span class="hl-1">); </span><span class="hl-6">// Brad</span><br/><span class="hl-1">});</span>
@@ -23,6 +23,12 @@
 <p><strong>TypeScript</strong></p>
 <pre><code class="language-js"><span class="hl-7">import</span><span class="hl-1"> { </span><span class="hl-0">CodewarsV1Api</span><span class="hl-1"> } </span><span class="hl-7">from</span><span class="hl-1"> </span><span class="hl-5">&#39;codewars-node-api&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-2">const</span><span class="hl-1"> </span><span class="hl-3">cwApi</span><span class="hl-1"> = </span><span class="hl-2">new</span><span class="hl-1"> </span><span class="hl-4">CodewarsV1Api</span><span class="hl-1">();</span><br/><br/><span class="hl-2">const</span><span class="hl-1"> </span><span class="hl-3">userId</span><span class="hl-1"> = </span><span class="hl-5">&#39;bradtaniguchi&#39;</span><span class="hl-1">;</span><br/><span class="hl-0">cwApi</span><span class="hl-1">.</span><span class="hl-4">getUser</span><span class="hl-1">(</span><span class="hl-0">userId</span><span class="hl-1">).</span><span class="hl-4">then</span><span class="hl-1">((</span><span class="hl-0">user</span><span class="hl-1">) </span><span class="hl-2">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-1">  </span><span class="hl-0">console</span><span class="hl-1">.</span><span class="hl-4">log</span><span class="hl-1">(</span><span class="hl-0">user</span><span class="hl-1">.</span><span class="hl-0">name</span><span class="hl-1">); </span><span class="hl-6">// Brad</span><br/><span class="hl-1">});</span>
 </code></pre>
+
+<a href="#documentation" id="documentation" style="color: inherit; text-decoration: none;">
+  <h2>Documentation</h2>
+</a>
+<p>All documentation is available here:
+<a href="https://bradtaniguchi.dev/codewars-node-api/">https://bradtaniguchi.dev/codewars-node-api/</a></p>
 
 <a href="#tooling-scripts" id="tooling-scripts" style="color: inherit; text-decoration: none;">
   <h2>Tooling Scripts</h2>
