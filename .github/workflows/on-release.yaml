@@ -19,24 +19,25 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-  release-to-gh:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
+  # Gave up this doesn't work, probably due to the scope issues
+  # release-to-gh:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v3
 
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '16.x'
-          registry-url: 'https://npm.pkg.github.com/'
-          scope: '@bradtaniguchi'
+  #     - uses: actions/setup-node@v3
+  #       with:
+  #         node-version: '16.x'
+  #         registry-url: 'https://npm.pkg.github.com/'
+  #         scope: '@bradtaniguchi'
 
-      - run: npm ci
+  #     - run: npm ci
 
-      - name: Authenticate with the GitHub Package Registry
-        run:
-          echo "//npm.pkg.github.com:_authToken=${{ secrets.GITHUB_TOKEN }}" >
-          ~/.npmrc
+  #     - name: Authenticate with the GitHub Package Registry
+  #       run:
+  #         echo "//npm.pkg.github.com:_authToken=${{ secrets.GITHUB_TOKEN }}" >
+  #         ~/.npmrc
 
-      - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #     - run: npm publish
+  #       env:
+  #         NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
