@@ -43,6 +43,7 @@ cwApi.getUser(userId).then((user) => {
   console.log(user.name); // Brad
 });
 ```
+
 ## Documentation
 
 All documentation is available here:

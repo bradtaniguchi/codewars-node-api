@@ -9,7 +9,7 @@
     "lint:fix": "npx eslint --fix",
     "test": "jest",
     "format": "npx prettier --write src",
-    "clean": "rimraf lib",
+    "clean": "rimraf lib docs",
     "build:docs": "npx typedoc src",
     "get:user": "npx ts-node --project=tools/tsconfig.tools.json tools/get-user.ts",
     "get:completed-challenges": "npx ts-node --project=tools/tsconfig.tools.json tools/get-completed-challenges.ts",
