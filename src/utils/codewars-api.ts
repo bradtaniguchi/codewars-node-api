@@ -1,4 +1,7 @@
 import * as https from 'https';
+import { isCodewarsErrorCode } from '../constants/codewars-error-codes';
+import { CodewarsUnknownError } from '../errors/codewars-errors';
+import { createCodewarsError } from '../errors/create-codewars-error';
 import { AuthoredChallengeResponse } from '../types/authored-challenge-response';
 import { CodeChallenge } from '../types/code-challenge';
 import { CompletedChallengeResponse } from '../types/completed-challenge-response';
@@ -16,17 +19,34 @@ export class CodewarsV1Api {
 
   /**
    * Internal method to make https get requests.
-   * TODO: throw error if bad headers
    */
   private async _request<T>(url: string): Promise<T> {
     return new Promise((resolve, reject) =>
       https
         .get(url, (res) => {
+          if (isCodewarsErrorCode(res.statusCode)) {
+            const err = createCodewarsError(res.statusCode);
+            if (!err) {
+              // This is an unknown status code,
+              return reject(
+                new CodewarsUnknownError(
+                  'Unknown Codewars API error occurred',
+                  res.statusCode
+                )
+              );
+            }
+            return reject(err);
+          }
+
           let data = '';
           res.on('data', (chunk) => (data += chunk));
           res.on('end', () => resolve(JSON.parse(data)));
         })
-        .on('error', reject)
+        .on('error', () => {
+          reject(
+            new CodewarsUnknownError('Unknown Codewars API error occurred')
+          );
+        })
     );
   }
 
