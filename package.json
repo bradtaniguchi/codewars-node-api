@@ -10,6 +10,7 @@
     "test": "jest",
     "format": "npx prettier --write src",
     "clean": "rimraf lib",
+    "build:docs": "npx typedoc src",
     "get:user": "npx ts-node --project=tools/tsconfig.tools.json tools/get-user.ts",
     "get:completed-challenges": "npx ts-node --project=tools/tsconfig.tools.json tools/get-completed-challenges.ts",
     "get:authored-challenges": "npx ts-node --project=tools/tsconfig.tools.json tools/get-authored-challenges.ts",
@@ -47,6 +48,7 @@
     "rimraf": "^3.0.2",
     "ts-jest": "^28.0.1",
     "ts-node": "^10.0.0",
+    "typedoc": "^0.22.15",
     "typescript": "^4.3.2"
   }
 }

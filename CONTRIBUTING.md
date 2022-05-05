@@ -1,24 +1,11 @@
 # Contributing
 
-## Contents
-
-<!-- toc -->
-
-- [Installation](#installation)
-- [Summary](#summary)
-- [Linting the code](#linting-the-code)
-- [Building code](#building-code)
-- [External Resources](#external-resources)
-- [Have Questions?](#have-questions)
-
-<!-- tocstop -->
-
 ## Installation
 
 Clone the repository.
 
 ```
-git clone https://github.com/bradtaniguchi/codewars-node-api.git
+git clone git@github.com:bradtaniguchi/codewars-node-api.git
 cd codewars-node-api
 ```
 
@@ -26,7 +13,7 @@ Install required Node.js version in your machine as mentioned in .nvmrc
 
 or
 
-If you have nvm installed, run the command
+If you have [nvm](https://dev.codewars.com/#introduction) installed, run the command
 
 ```
 nvm use
@@ -65,14 +52,37 @@ To build the code use the command:
 npm run build
 ```
 
-## Note about CI
+## Building docs
 
-Currently there isn't any CI/CID setup, but in the future it will automatically
-be ran automatically on open PRs
+To build the [typedoc](https://www.npmjs.com/package/typedoc) based doc site, use the command:
+
+```bash
+npm run build:docs
+```
+
+To serve the docs locally you can use:
+
+```bash
+npx http-server docs
+```
+
+This will install [http-server](https://www.npmjs.com/package/http-server) on each run, and
+serve the docs locally.
+
+## Running sanity tests
+
+Currently we use [jest](https://jestjs.io/docs/getting-started) to run some sanity checks
+against the actual code and API calls. These **do not** need to be ran locally, as the github-actions
+pipelines will check them automatically during PR review.
+
+```bash
+npm run test
+```
 
 ## External Resources
 
 Below is the official api docs, which this api is based off of. This could be subject to change.
+https://dev.codewars.com/#introduction
 
 ## Have Questions?
 

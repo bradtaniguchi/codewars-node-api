@@ -14,7 +14,9 @@
     "kohler",
     "Metaprogramming",
     "npmrc",
+    "peaceiris",
     "tocstop",
+    "typedoc",
     "zhuangtongfa"
   ]
 }
