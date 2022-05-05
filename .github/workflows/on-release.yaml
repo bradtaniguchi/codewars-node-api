@@ -3,7 +3,7 @@ on:
   release:
     types: [created]
 jobs:
-  build:
+  release-to-npm:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -19,18 +19,19 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
+  release-to-gh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
       - uses: actions/setup-node@v3
         with:
-          registry-url: 'https://npm.pkg.github.com'
+          node-version: '16.x'
+          registry-url: 'https://npm.pkg.github.com/'
           scope: '@bradtaniguchi'
 
-      # Possible workaround found here:
-      # https://github.com/actions/setup-node/issues/130#issuecomment-691103257
-      - name: Authenticate with the GitHub Package Registry
-        run:
-          echo "//npm.pkg.github.com:_authToken=${{ secrets.GITHUB_TOKEN }}" >
-          ~/.npmrc
+      - run: npm ci
 
-      - run: npm publish --@bradtaniguchi:registry=https://npm.pkg.github.com/
+      - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
