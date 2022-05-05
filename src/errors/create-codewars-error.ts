@@ -18,8 +18,7 @@ import {
  * error-code.
  */
 export const createCodewarsError = (
-  code: CodewarsErrorCode,
-  message?: string
+  code: CodewarsErrorCode
 ): CodewarsError | undefined => {
   const errClass = {
     [CodewarsBadRequest.code]: CodewarsBadRequest,
@@ -34,5 +33,6 @@ export const createCodewarsError = (
     [CodewarsServiceUnavailable.code]: CodewarsServiceUnavailable
   }[code];
   if (!errClass) return;
-  return new errClass(message);
+  // We re-use the meaning and code from the static instance.
+  return new errClass(errClass.meaning, errClass.code);
 };

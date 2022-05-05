@@ -3,11 +3,14 @@ import { CodewarsErrorCode } from '../constants/codewars-error-codes';
 /**
  * Represents a generic Codewars error response when calling their API.
  */
-export interface CodewarsError extends Error {
+export abstract class CodewarsError extends Error {
   /**
-   * The description of the error code.
-   * See:
-   * https://dev.codewars.com/#errors
+   *
+   * @param message The will be the description of the error.
+   * See: https://dev.codewars.com/#errors
+   * @param code the code of the error, if available
    */
-  meaning: string;
+  constructor(message: string, public code?: CodewarsErrorCode) {
+    super(message);
+  }
 }

@@ -25,14 +25,14 @@ export class CodewarsV1Api {
       https
         .get(url, (res) => {
           if (isCodewarsErrorCode(res.statusCode)) {
-            const err = createCodewarsError(
-              res.statusCode,
-              'Codewars API error occurred'
-            );
+            const err = createCodewarsError(res.statusCode);
             if (!err) {
               // This is an unknown status code,
               return reject(
-                new CodewarsUnknownError('Unknown Codewars API error occurred')
+                new CodewarsUnknownError(
+                  'Unknown Codewars API error occurred',
+                  res.statusCode
+                )
               );
             }
             return reject(err);
