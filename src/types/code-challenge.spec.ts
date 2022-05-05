@@ -30,10 +30,7 @@ describe('CodeChallenge', () => {
       totalStars: 12,
       voteScore: 512,
       publishedAt: '2013-11-05T00:07:31Z',
-      approvedAt: '2013-12-20T14:53:06Z',
-
-      // **Note** This can be optional, will be changed in the future
-      contributorsWanted: false
+      approvedAt: '2013-12-20T14:53:06Z'
     };
   });
 });
