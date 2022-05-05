@@ -64,3 +64,7 @@ export class CodewarsServiceUnavailable extends Error implements CodewarsError {
   public readonly meaning =
     "Service Unavailable -- We're temporarily offline for maintenance. Please try again later.";
 }
+
+export class CodewarsUnknownError extends Error implements CodewarsError {
+  public readonly meaning = 'Unknown error occurred';
+}

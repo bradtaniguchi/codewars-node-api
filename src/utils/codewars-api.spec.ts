@@ -1,3 +1,4 @@
+import { CodewarsNotFound } from '../errors/codewars-errors';
 import { CodewarsV1Api } from './codewars-api';
 
 describe('CodewarsApi', () => {
@@ -19,16 +20,14 @@ describe('CodewarsApi', () => {
       const user = await cwApi.getUser(TEST_USERNAME);
       expect(user.username).toBe(TEST_USERNAME);
     });
-    // TODO
-    it.skip('throws error if username not found', async () => {
+    it('throws error if username not found', async () => {
       expect.assertions(1);
       try {
-        const res = await cwApi.getUser(
+        await cwApi.getUser(
           TEST_USERNAME + TEST_USERNAME + TEST_USERNAME + TEST_USERNAME
         );
-        console.log(res); // { success: false, reason: 'not found' }
       } catch (e) {
-        expect(e).toEqual({}); // TODO:
+        expect(e).toEqual(new CodewarsNotFound('Codewars API error occurred'));
       }
     });
   });
@@ -46,7 +45,14 @@ describe('CodewarsApi', () => {
       expect(typeof challenges.totalItems).toEqual('number');
       expect(typeof challenges.totalPages).toEqual('number');
     });
-    it.todo('throws error if username not found');
+    it('throws error if username not found', async () => {
+      expect.assertions(1);
+      try {
+        await cwApi.getCompletedChallenges(TEST_USERNAME + TEST_USERNAME);
+      } catch (e) {
+        expect(e).toEqual(new CodewarsNotFound('Codewars API error occurred'));
+      }
+    });
   });
 
   describe('getAuthoredChallenges', () => {
@@ -54,7 +60,14 @@ describe('CodewarsApi', () => {
       const challenges = await cwApi.getAuthoredChallenges(TEST_USERNAME);
       expect(Array.isArray(challenges.data)).toBeTruthy();
     });
-    it.todo('throws error if username not found');
+    it('throws error if username not found', async () => {
+      expect.assertions(1);
+      try {
+        await cwApi.getAuthoredChallenges(TEST_USERNAME + TEST_USERNAME);
+      } catch (e) {
+        expect(e).toEqual(new CodewarsNotFound('Codewars API error occurred'));
+      }
+    });
   });
 
   describe('getCodeChallenge', () => {
@@ -72,6 +85,13 @@ describe('CodewarsApi', () => {
         })
       );
     });
-    it.todo('throws error if challenge not found');
+    it('throws error if challenge not found', async () => {
+      expect.assertions(1);
+      try {
+        await cwApi.getCodeChallenge(TEST_USERNAME + TEST_USERNAME);
+      } catch (e) {
+        expect(e).toEqual(new CodewarsNotFound('Codewars API error occurred'));
+      }
+    });
   });
 });
