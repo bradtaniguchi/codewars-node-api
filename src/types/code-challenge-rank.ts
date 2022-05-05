@@ -1,10 +1,8 @@
 /**
  * Object that describes the code challenge rank
  *
- * TODO: this has a typo, will be deprecated and removed
- * in a future version
  */
-export interface CodeChallangeRank {
+export interface CodeChallengeRank {
   /**
    * The id of the challenge-rank
    */
@@ -18,3 +16,10 @@ export interface CodeChallangeRank {
    */
   color: string;
 }
+
+/**
+ * Alias of `CodeChallengeRank`
+ * @see CodeChallengeRank
+ * @deprecated use CodeChallengeRank, will be removed in v2
+ */
+export type CodeChallangeRank = CodeChallengeRank;
