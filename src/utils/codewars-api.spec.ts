@@ -19,7 +19,18 @@ describe('CodewarsApi', () => {
       const user = await cwApi.getUser(TEST_USERNAME);
       expect(user.username).toBe(TEST_USERNAME);
     });
-    it.todo('throws error if username not found');
+    // TODO
+    it.skip('throws error if username not found', async () => {
+      expect.assertions(1);
+      try {
+        const res = await cwApi.getUser(
+          TEST_USERNAME + TEST_USERNAME + TEST_USERNAME + TEST_USERNAME
+        );
+        console.log(res); // { success: false, reason: 'not found' }
+      } catch (e) {
+        expect(e).toEqual({}); // TODO:
+      }
+    });
   });
 
   describe('getCompletedChallenges', () => {

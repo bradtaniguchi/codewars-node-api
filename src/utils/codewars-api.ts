@@ -16,12 +16,13 @@ export class CodewarsV1Api {
 
   /**
    * Internal method to make https get requests.
-   * TODO: throw error if bad headers
    */
   private async _request<T>(url: string): Promise<T> {
     return new Promise((resolve, reject) =>
       https
         .get(url, (res) => {
+          console.log('status code', res.statusCode);
+          console.log('headers', res.headers);
           let data = '';
           res.on('data', (chunk) => (data += chunk));
           res.on('end', () => resolve(JSON.parse(data)));

@@ -1,3 +1,6 @@
+export * from './constants/codewars-error-codes';
+export * from './errors/codewars-error';
+export * from './errors/codewars-errors';
 export * from './types/author';
 export * from './types/authored-challenge';
 export * from './types/authored-challenge-response';
