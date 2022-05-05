@@ -24,6 +24,6 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           scope: '@bradtaniguchi'
 
-      - run: npm publish
+      - run: npm publish --@bradtaniguchi:registry=https://npm.pkg.github.com/
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
