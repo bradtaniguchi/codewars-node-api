@@ -16,7 +16,7 @@ npm i codewars-node-api
 
 Note: add `--save` if you are using npm < 5.0.0
 
-## Usage
+## Example Usage
 
 **node.js**
 
@@ -43,6 +43,10 @@ cwApi.getUser(userId).then((user) => {
   console.log(user.name); // Brad
 });
 ```
+## Documentation
+
+All documentation is available here:
+https://bradtaniguchi.dev/codewars-node-api/
 
 ## Tooling Scripts
 
