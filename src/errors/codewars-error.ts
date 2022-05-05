@@ -5,10 +5,6 @@ import { CodewarsErrorCode } from '../constants/codewars-error-codes';
  */
 export interface CodewarsError extends Error {
   /**
-   * The HTTP code codewars provided.
-   */
-  code: CodewarsErrorCode;
-  /**
    * The description of the error code.
    * See:
    * https://dev.codewars.com/#errors
