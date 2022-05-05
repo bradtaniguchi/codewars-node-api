@@ -1,6 +1,6 @@
 {
   "name": "codewars-node-api",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "codewars nodejs api client, with types",
   "scripts": {
     "prepare": "npm run clean && npm run build",
