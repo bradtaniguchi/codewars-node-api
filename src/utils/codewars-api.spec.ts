@@ -27,7 +27,7 @@ describe('CodewarsApi', () => {
           TEST_USERNAME + TEST_USERNAME + TEST_USERNAME + TEST_USERNAME
         );
       } catch (e) {
-        expect(e).toEqual(new CodewarsNotFound('Codewars API error occurred'));
+        expect(e).toEqual(new CodewarsNotFound(CodewarsNotFound.meaning));
       }
     });
   });
@@ -50,7 +50,7 @@ describe('CodewarsApi', () => {
       try {
         await cwApi.getCompletedChallenges(TEST_USERNAME + TEST_USERNAME);
       } catch (e) {
-        expect(e).toEqual(new CodewarsNotFound('Codewars API error occurred'));
+        expect(e).toEqual(new CodewarsNotFound(CodewarsNotFound.meaning));
       }
     });
   });
@@ -65,7 +65,7 @@ describe('CodewarsApi', () => {
       try {
         await cwApi.getAuthoredChallenges(TEST_USERNAME + TEST_USERNAME);
       } catch (e) {
-        expect(e).toEqual(new CodewarsNotFound('Codewars API error occurred'));
+        expect(e).toEqual(new CodewarsNotFound(CodewarsNotFound.meaning));
       }
     });
   });
@@ -90,7 +90,7 @@ describe('CodewarsApi', () => {
       try {
         await cwApi.getCodeChallenge(TEST_USERNAME + TEST_USERNAME);
       } catch (e) {
-        expect(e).toEqual(new CodewarsNotFound('Codewars API error occurred'));
+        expect(e).toEqual(new CodewarsNotFound(CodewarsNotFound.meaning));
       }
     });
   });
