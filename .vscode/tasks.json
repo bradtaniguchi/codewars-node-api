@@ -1,0 +1,61 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "npm",
+      "script": "build",
+      "problemMatcher": [],
+      "label": "npm: build",
+      "detail": "Build lib via tsc"
+    },
+    {
+      "type": "npm",
+      "script": "lint",
+      "problemMatcher": [],
+      "label": "npm: lint",
+      "detail": "Lints files via eslint"
+    },
+    {
+      "type": "npm",
+      "script": "lint:fix",
+      "problemMatcher": [],
+      "label": "npm: lint:fix",
+      "detail": "Lints files via eslint with --fix flag"
+    },
+    {
+      "type": "npm",
+      "script": "test",
+      "problemMatcher": [],
+      "label": "npm: test",
+      "detail": "Tests files using jest"
+    },
+    {
+      "type": "npm",
+      "script": "format",
+      "problemMatcher": [],
+      "label": "npm: format",
+      "detail": "Formats the files via prettier"
+    },
+    {
+      "type": "npm",
+      "script": "clean",
+      "problemMatcher": [],
+      "label": "npm: clean",
+      "detail": "Remove untracked built files such as the docs and libs generated"
+    },
+    {
+      "type": "npm",
+      "script": "build:docs",
+      "problemMatcher": [],
+      "label": "npm: build:docs",
+      "detail": "Builds the docs via typedocs"
+    },
+    {
+      "type": "npm",
+      "script": "smoke:docs",
+      "problemMatcher": [],
+      "label": "npm: smoke:docs",
+      "detail": "Serves the built docs via http-server"
+    }
+  ]
+}
