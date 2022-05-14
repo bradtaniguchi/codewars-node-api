@@ -63,11 +63,8 @@ npm run build:docs
 To serve the docs locally you can use:
 
 ```bash
-npx http-server docs
+npm run smoke:docs
 ```
-
-This will install [http-server](https://www.npmjs.com/package/http-server) on each run, and
-serve the docs locally.
 
 ## Running sanity tests
 
