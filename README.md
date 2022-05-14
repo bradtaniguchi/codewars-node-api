@@ -58,11 +58,15 @@ just getting raw data directly outputted directly into stdout.
 
 ### get-user
 
+Returns a single user.
+
 ```bash
 npm run get:user <username | userId>
 ```
 
 ### get-completed-challenges
+
+Returns the list of completed challenges for the given user. Includes pagination.
 
 ```bash
 npm run get:completed-challenges <username | userId> [page = 0]
@@ -70,14 +74,18 @@ npm run get:completed-challenges <username | userId> [page = 0]
 
 ### get-authored-challenges
 
+Returns a list of authored challenges made by the user.
+
 ```bash
 npm run get:authored-challenges <username | userId>
 ```
 
-### get-code-challenges
+### get-code-challenge
+
+Returns a single code challenge.
 
 ```bash
-npm run get:code-challenges <challengeId | challenge-slug>
+npm run get:code-challenge <challengeId | challenge-slug>
 ```
 
 ## Contributing
