@@ -52,6 +52,8 @@ To build the code use the command:
 npm run build
 ```
 
+This will create a `lib` folder, which will house the exported js and .d.ts files.
+
 ## Building docs
 
 To build the [typedoc](https://www.npmjs.com/package/typedoc) based doc site, use the command:
