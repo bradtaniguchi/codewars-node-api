@@ -1,6 +1,6 @@
 # codewars-node-api
 
-Utility to call the codewars' [public api](https://dev.codewars.com/#introduction).
+Utility to call the codewars' [public api](https://dev.codewars.com/#introduction) from nodejs.
 
 **Not affiliated with codewars**.
 
@@ -46,15 +46,17 @@ cwApi.getUser(userId).then((user) => {
 
 ## Documentation
 
-All documentation is available here:
+All code documentation is available here:
 https://bradtaniguchi.dev/codewars-node-api/
 
 ## Tooling Scripts
 
-Below is docs on using the `tools` scripts directly by using the npm scripts. Useful for testing, or
-just getting raw data directly outputted directly into stdout.
+Below is docs on using the `tools` scripts directly by using the npm scripts.
+Useful for testing, or just getting raw data directly outputted directly into stdout.
+These scripts can be used after cloning this repo locally and testing against the actual api calls your making.
 
-**note** all `npm run` commands can be passed the `--silent` flag to suppress the first 2 lines printed, leaving only the raw JSON data being printed out to stdout.
+**note** all `npm run` commands can be passed the `--silent` flag to suppress the first 2 lines printed, leaving only the raw JSON data being printed out to stdout. This could be useful if your want to save
+a given request to a file, or "pipe" it in your shell.
 
 ### get-user
 
