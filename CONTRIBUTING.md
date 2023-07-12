@@ -4,7 +4,7 @@
 
 Clone the repository.
 
-```
+```bash
 git clone git@github.com:bradtaniguchi/codewars-node-api.git
 cd codewars-node-api
 ```
@@ -15,13 +15,13 @@ or
 
 If you have [nvm](https://dev.codewars.com/#introduction) installed, run the command
 
-```
+```bash
 nvm use
 ```
 
 Install the dependencies
 
-```
+```bash
 npm install
 ```
 
@@ -81,7 +81,7 @@ npm run test
 ## External Resources
 
 Below is the official api docs, which this api is based off of. This could be subject to change.
-https://dev.codewars.com/#introduction
+<https://dev.codewars.com/#introduction>
 
 ## Have Questions?
 
