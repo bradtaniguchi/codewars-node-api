@@ -4,13 +4,16 @@ Utility to call the codewars' [public api](https://dev.codewars.com/#introductio
 
 **Not affiliated with codewars**.
 
-<img alt="npm" src="https://img.shields.io/npm/v/codewars-node-api?style=flat-square"> <img alt="license" src="https://img.shields.io/github/license/bradtaniguchi/codewars-node-api?style=flat-square"> <img alt="github workflow" src="https://img.shields.io/github/workflow/status/bradtaniguchi/codewars-node-api/on-push-workflow?style=flat-square"> <img alt="github issues" src="https://img.shields.io/github/issues/bradtaniguchi/codewars-node-api?style=flat-square">
+<img alt="npm" src="https://img.shields.io/npm/v/codewars-node-api?style=flat-square">
+<img alt="license" src="https://img.shields.io/github/license/bradtaniguchi/codewars-node-api?style=flat-square">
+<img alt="github workflow" src="https://img.shields.io/github/workflow/status/bradtaniguchi/codewars-node-api/on-push-workflow?style=flat-square">
+<img alt="github issues" src="https://img.shields.io/github/issues/bradtaniguchi/codewars-node-api?style=flat-square">
 
 ## Installation
 
 Using npm:
 
-```
+```bash
 npm i codewars-node-api
 ```
 
@@ -18,7 +21,7 @@ Note: add `--save` if you are using npm < 5.0.0
 
 ## Example Usage
 
-**node.js**
+### node.js
 
 ```js
 const { CodewarsV1Api } = require('codewars-node-api');
@@ -31,9 +34,9 @@ cwApi.getUser(userId).then((user) => {
 });
 ```
 
-**TypeScript**
+### TypeScript
 
-```js
+```ts
 import { CodewarsV1Api } from 'codewars-node-api';
 
 const cwApi = new CodewarsV1Api();
@@ -47,7 +50,7 @@ cwApi.getUser(userId).then((user) => {
 ## Documentation
 
 All code documentation is available here:
-https://bradtaniguchi.dev/codewars-node-api/
+<https://bradtaniguchi.dev/codewars-node-api/>
 
 ## Tooling Scripts
 
