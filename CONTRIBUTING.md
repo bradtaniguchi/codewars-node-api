@@ -78,6 +78,17 @@ pipelines will check them automatically during PR review.
 npm run test
 ```
 
+## Creating new release
+
+(for maintainers only)
+
+Releases are handled by github and published to [npm](https://www.npmjs.com/package/codewars-node-api).
+To create a new release, create a new tag via `npm version <major|minor|patch>`
+
+Then push the tag/changes to github via `git push --tags`.
+
+Once this is pushed, then create a new release on github, and publish the release notes.
+
 ## External Resources
 
 Below is the official api docs, which this api is based off of. This could be subject to change.
