@@ -1,12 +1,21 @@
 import { WebhookChallengeActions } from '../constants';
 import { CodeChallenge } from './code-challenge';
-import { User } from './user';
 
 /**
  * Type representing the webhook challenge events
  *
  * Further documentation is here:
  * https://dev.codewars.com/?shell#code-challenges
+ *
+ * Headers:
+ * ```
+ * User-Agent: Codewars Hookbot
+ * Content-Type: application/json
+ * X-Webhook-Event: code_challenge
+ * X-Webhook-Secret: <secret>
+ * ```
+ *
+ * TODO: add solution_finalized version
  */
 export interface WebhookChallengeEvent {
   /**
@@ -22,8 +31,8 @@ export interface WebhookChallengeEvent {
      */
     id: CodeChallenge['id'];
     /**
-     * The id of the user who performed the action
+     * Id of the webhook that created and sent this event.
      */
-    created_by_id: User['id'];
+    created_by_id: string;
   };
 }
