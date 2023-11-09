@@ -8,6 +8,7 @@
   "scripts": {
     "prepare": "husky install",
     "build": "tsc",
+    "dev": "tsc --watch",
     "lint": "eslint",
     "lint:fix": "npx eslint --fix",
     "test": "jest",
@@ -25,6 +26,9 @@
   "files": [
     "lib/**/*"
   ],
+  "bin": {
+    "codewars-node-cli": "./lib/codewars-node-cli.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bradtaniguchi/codewars-node-api.git"
@@ -57,5 +61,8 @@
     "ts-node": "^10.0.0",
     "typedoc": "^0.22.15",
     "typescript": "~4.7.2"
+  },
+  "dependencies": {
+    "commander": "^11.1.0"
   }
 }
