@@ -15,11 +15,7 @@
     "format": "npx prettier --write src",
     "clean": "rimraf lib docs",
     "build:docs": "npx typedoc src",
-    "smoke:docs": "npx http-server docs",
-    "get:user": "npx ts-node --project=tools/tsconfig.tools.json tools/get-user.ts",
-    "get:completed-challenges": "npx ts-node --project=tools/tsconfig.tools.json tools/get-completed-challenges.ts",
-    "get:authored-challenges": "npx ts-node --project=tools/tsconfig.tools.json tools/get-authored-challenges.ts",
-    "get:code-challenge": "npx ts-node --project=tools/tsconfig.tools.json tools/get-code-challenge.ts"
+    "smoke:docs": "npx http-server docs"
   },
   "main": "lib/index.js",
   "types": "lib/index.d.js",
@@ -58,7 +54,6 @@
     "prettier": "^2.3.0",
     "rimraf": "^3.0.2",
     "ts-jest": "^28.0.1",
-    "ts-node": "^10.0.0",
     "typedoc": "^0.22.15",
     "typescript": "~4.7.2"
   },
