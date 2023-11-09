@@ -78,6 +78,15 @@ pipelines will check them automatically during PR review.
 npm run test
 ```
 
+## Cleaning up
+
+Anytime you build anything the codebase will create static files that are not tracked by git. These can be cleaned
+up using the following command:
+
+```bash
+npm run clean
+```
+
 ## Creating new release
 
 (for maintainers only)
