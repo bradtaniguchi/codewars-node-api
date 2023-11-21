@@ -1,5 +1,6 @@
 import { WebhookChallengeActions } from '../constants';
 import { CodeChallenge } from './code-challenge';
+import { User } from './user';
 
 /**
  * Type representing the webhook challenge events
@@ -34,5 +35,18 @@ export interface WebhookChallengeEvent {
      * Id of the webhook that created and sent this event.
      */
     created_by_id: string;
+  };
+  solution_finalized?: {
+    /**
+     * The id of the code challenge where the solution is finalized.
+     */
+    id: CodeChallenge['id'];
+
+    /**
+     * The user's id
+     *
+     * TODO: not sure where else this is used.
+     */
+    user_id: string;
   };
 }
