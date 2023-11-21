@@ -9,3 +9,6 @@ export * from './user';
 export * from './user-code-challenges';
 export * from './user-rank';
 export * from './user-ranks';
+export * from './webhook-challenge-event';
+export * from './webhook-update-event';
+export * from './webhook-user-event';
