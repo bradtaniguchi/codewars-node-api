@@ -15,6 +15,7 @@
     "format": "npx prettier --write src",
     "clean": "rimraf lib docs",
     "build:docs": "npx typedoc src",
+    "dev:docs": "npx typedoc src --watch && npx http-server docs",
     "smoke:docs": "npx http-server docs"
   },
   "main": "lib/index.js",
