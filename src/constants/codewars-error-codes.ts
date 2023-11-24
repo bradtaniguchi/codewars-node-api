@@ -3,9 +3,9 @@
  *
  * @see {@link CodewarsError}
  */
-export const CODEWARS_ERROR_CODES = [
+export const CODEWARS_ERROR_CODES = Object.freeze([
   400, 401, 403, 404, 405, 406, 422, 429, 500, 503
-] as const;
+] as const);
 
 /**
  * The type of http response codes the codewars api can return.
