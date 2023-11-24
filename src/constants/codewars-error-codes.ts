@@ -17,9 +17,11 @@ export type CodewarsErrorCode = (typeof CODEWARS_ERROR_CODES)[number];
 /**
  * Type-guard that can be used to verify if the given code is a codewars http response codes.
  *
- * @param code the code to check, will also verify if a number
  * @see {@link CODEWARS_ERROR_CODES}
  * @see {@link CodewarsErrorCode}
+ *
+ * @param code the code to check, will also verify if a number
+ * @returns true if the given code is a codewars http response codes
  */
 export const isCodewarsErrorCode = (code: unknown): code is CodewarsErrorCode =>
   typeof code === 'number' &&
