@@ -34,7 +34,7 @@ cwApi.getUser(userId).then((user) => {
 });
 ```
 
-### TypeScript
+### TypeScript/esm
 
 ```ts
 import { CodewarsV1Api } from 'codewars-node-api';
@@ -52,45 +52,33 @@ cwApi.getUser(userId).then((user) => {
 All code documentation is available here:
 <https://bradtaniguchi.dev/codewars-node-api/>
 
-## Tooling Scripts
+## CLI
 
-Below is docs on using the `tools` scripts directly by using the npm scripts.
-Useful for testing, or just getting raw data directly outputted directly into stdout.
-These scripts can be used after cloning this repo locally and testing against the actual api calls your making.
+This package comes with a CLI interface that can be used to interact with the API directly from your terminal.
+This could be useful as a quick reference, or working with other command-line tools.
 
-**note** all `npm run` commands can be passed the `--silent` flag to suppress the first 2 lines printed, leaving only the raw JSON data being printed out to stdout. This could be useful if your want to save
-a given request to a file, or "pipe" it in your shell.
-
-### get-user
-
-Returns a single user.
+### Usage
 
 ```bash
-npm run get:user <username | userId>
+codewars-node-cli help
 ```
 
-### get-completed-challenges
-
-Returns the list of completed challenges for the given user. Includes pagination.
+### Getting user example
 
 ```bash
-npm run get:completed-challenges <username | userId> [page = 0]
+codewars-node-cli user get bradtaniguchi
 ```
 
-### get-authored-challenges
-
-Returns a list of authored challenges made by the user.
+### Getting authored challenges by user example
 
 ```bash
-npm run get:authored-challenges <username | userId>
+codewars-node-cli challenges authored bradtaniguchi
 ```
 
-### get-code-challenge
-
-Returns a single code challenge.
+### Getting completed challenges by user example
 
 ```bash
-npm run get:code-challenge <challengeId | challenge-slug>
+codewars-node-cli challenges completed bradtaniguchi
 ```
 
 ## Contributing

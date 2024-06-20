@@ -5,6 +5,11 @@
 import { UserCodeChallenges } from './user-code-challenges';
 import { UserRanks } from './user-ranks';
 
+/**
+ * The user's information
+ *
+ * TODO: not sure how `id` works, but should be included?
+ */
 export interface User {
   /**
    * Username of the user.

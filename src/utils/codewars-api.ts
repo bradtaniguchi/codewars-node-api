@@ -8,7 +8,21 @@ import { CompletedChallengeResponse } from '../types/completed-challenge-respons
 import { User } from '../types/user';
 
 /**
- * Class to interface with the codewars v1 public api.
+ * Main interface class to interface with the codewars v1 public api.
+ *
+ *
+ * @example
+ *
+ * ```typescript
+ * import { CodewarsV1Api } from 'codewars-node-api';
+ *
+ * const cwApi = new CodewarsV1Api();
+ *
+ * const userId = 'bradtaniguchi';
+ *  cwApi.getUser(userId).then((user) => {
+ * console.log(user.name); // Brad
+ * });
+ * ```
  */
 export class CodewarsV1Api {
   /**
@@ -18,7 +32,9 @@ export class CodewarsV1Api {
   constructor() {}
 
   /**
-   * Internal method to make https get requests.
+   * Internal method to make https get requests using the https nodejs module.
+   *
+   * https://nodejs.org/api/https.html
    */
   private async _request<T>(url: string): Promise<T> {
     return new Promise((resolve, reject) =>
@@ -51,9 +67,10 @@ export class CodewarsV1Api {
   }
 
   /**
-   * Return the user for the given username or userId
+   * Return the user for the given username or userId.
+   * Will throw a {@link CodewarsError} depending on the non-200 response status code.
    * @param user the username or userId
-   * @returns the user
+   * @returns the user found relative to the username or userId.
    */
   public getUser(user: string): Promise<User> {
     const url = `${CodewarsV1Api.BASE_URL}/users/${user}`;
@@ -62,6 +79,7 @@ export class CodewarsV1Api {
 
   /**
    * Returns the list of completed challenges for the given user.
+   * Will throw a {@link CodewarsError} depending on the non-200 response status code.
    * @param user the username or userId
    * @param page the page offset,
    * @returns response object with number of pages, items and data.
@@ -76,6 +94,7 @@ export class CodewarsV1Api {
 
   /**
    * Returns the list of challenges authored by the user.
+   * Will throw a {@link CodewarsError} depending on the non-200 response status code.
    * @param user the username or userId
    * @returns response object with the data
    */
@@ -88,6 +107,7 @@ export class CodewarsV1Api {
 
   /**
    * Returns the code challenge.
+   * Will throw a {@link CodewarsError} depending on the non-200 response status code.
    * @param challenge the challengeId or the challenge slug
    * @returns code challenge
    */

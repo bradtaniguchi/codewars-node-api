@@ -68,6 +68,22 @@ To serve the docs locally you can use:
 npm run smoke:docs
 ```
 
+### Alternatively serve docs
+
+To help with typedoc writing, use the following commands between two different
+terminals:
+
+```bash
+npm run dev:docs
+```
+
+```bash
+npm run smoke:docs
+```
+
+The first will run the typedoc compilation server, and watch for changes. While the
+second will serve the docs using `http-server`.
+
 ## Running sanity tests
 
 Currently we use [jest](https://jestjs.io/docs/getting-started) to run some sanity checks
@@ -76,6 +92,15 @@ pipelines will check them automatically during PR review.
 
 ```bash
 npm run test
+```
+
+## Cleaning up
+
+Anytime you build anything the codebase will create static files that are not tracked by git. These can be cleaned
+up using the following command:
+
+```bash
+npm run clean
 ```
 
 ## Creating new release

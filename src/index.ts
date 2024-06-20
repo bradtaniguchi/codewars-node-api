@@ -1,4 +1,4 @@
-export * from './constants/codewars-error-codes';
+export * from './constants';
 export * from './errors';
 export * from './types';
 export * from './utils/codewars-api';
