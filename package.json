@@ -3,19 +3,20 @@
   "version": "2.0.0",
   "description": "codewars nodejs api client, with types",
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=22.0.0"
   },
   "scripts": {
     "prepare": "husky install",
-    "build": "tsc",
-    "dev": "tsc --watch",
+    "build": "tsc -b",
+    "dev": "tsc -b --watch",
     "lint": "eslint",
     "lint:fix": "npx eslint --fix",
     "test": "jest",
     "format": "npx prettier --write src",
     "clean": "rimraf lib docs",
-    "build:docs": "npx typedoc src",
-    "dev:docs": "npx typedoc src --watch && npx http-server docs",
+    "build:docs": "npx typedoc --options typedoc.json",
+    "dev:docs": "npx typedoc --options typedoc.json --watch",
+    "dev:docs:serve": "npx http-server docs",
     "smoke:docs": "npx http-server docs"
   },
   "main": "lib/index.js",
@@ -42,7 +43,7 @@
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
     "@types/jest": "^29.5.8",
-    "@types/node": "^20.9.0",
+    "@types/node": "^22.0.0",
     "@typescript-eslint/eslint-plugin": "^4.25.0",
     "@typescript-eslint/parser": "^4.25.0",
     "eslint": "^7.27.0",

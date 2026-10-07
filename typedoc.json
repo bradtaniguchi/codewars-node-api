@@ -1,0 +1,10 @@
+{
+  "entryPoints": ["src"],
+  "exclude": [
+    "**/*.spec.ts",
+    "**/*.test.ts"
+  ],
+  "out": "docs",
+  "excludeExternals": true,
+  "tsconfig": "./tsconfig.typedoc.json"
+}
