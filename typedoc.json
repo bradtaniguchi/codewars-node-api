@@ -1,8 +1,8 @@
 {
   "entryPoints": ["src"],
   "exclude": [
-    "*.spec.ts",
-    "*.test.ts"
+    "**/*.spec.ts",
+    "**/*.test.ts"
   ],
   "out": "docs",
   "excludeExternals": true,
